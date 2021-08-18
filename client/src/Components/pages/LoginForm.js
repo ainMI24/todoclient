@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { CREATE_USER_MUTATION } from "/Users/User/Downloads/GraphQL-ApolloClient-Template-main/client/src/GraphQL/Mutations";
+import { CREATE_USER_MUTATION } from "/Users/User/Downloads/Todoclient/client/src/GraphQL/Mutations";
 import { useMutation } from "@apollo/client";
 import 'semantic-ui-css/semantic.min.css'
 import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
@@ -52,7 +52,7 @@ function LoginForm() {
           }} 
           />
           <Form.Input 
-          fluid icon='user' 
+          fluid icon='mail' 
           iconPosition='left' 
           placeholder='E-mail'
           onChange={(e) => {
