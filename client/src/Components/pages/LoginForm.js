@@ -6,8 +6,7 @@ import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui
 
 
 function LoginForm() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -16,8 +15,6 @@ function LoginForm() {
   const addUser = () => {
     createUser({
       variables: {
-        firstName: firstName,
-        lastName: lastName,
         email: email,
         password: password,
       },
@@ -30,27 +27,11 @@ function LoginForm() {
   return (
     <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
     <Grid.Column style={{ maxWidth: 450 }}>
-      <Header as='h2' color='teal' textAlign='center'>
+      <Header as='h2' color='yellow' textAlign='center'>
         Login
       </Header>
       <Form size='large'>
         <Segment stacked>
-          <Form.Input 
-          fluid icon='user' 
-          iconPosition='left' 
-          placeholder='firstName'
-          onChange={(e) => {
-            setFirstName(e.target.value);
-          }} 
-          />
-          <Form.Input 
-          fluid icon='user' 
-          iconPosition='left' 
-          placeholder='lastName'
-          onChange={(e) => {
-            setLastName(e.target.value);
-          }} 
-          />
           <Form.Input 
           fluid icon='mail' 
           iconPosition='left' 
@@ -70,7 +51,7 @@ function LoginForm() {
               }}
           />
 
-          <Button color='teal' fluid size='large' onClick={addUser}>
+          <Button color='yellow' fluid size='large' onClick={addUser}>
             Login
           </Button>
         </Segment>
